@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questions</title>
+    <link rel="stylesheet" href="subjects/style.css" />
+  </head>
+  <header>
+    <nav class="navbar">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="questions.html">Questions</a></li>
+      <li><a href="biology.html">Biology</a></li>
+      <li><a href="math.html">Mathematics</a></li>
+      <li><a href="physics.html">Physics</a></li>
+      <li><a href="chemistry.html">Chemistry</a></li>
+    </nav>
+  </header>
+  <body>
+    <h1
+      style="
+        text-align: center;
+        margin-top: 10px;
+        background-color: #22a6bd;
+        padding: 3px;
+        border-radius: 5px;
+      "
+    >
+      WELCOME TO THE QUESTIONS
+    </h1>
+    <p>Here you can find all the questions for your practice.</p>
+    <p>Click on the subject in the navigation bar to view questions.</p>
+    <strong>📘 Questions Hub</strong>
+    </nav>
+    <hr />
+    <p class="info">New questions every week!</p>
+
+    <h1>UCE & Past & New Questions</h1>
+    <p>Practice smart.Succeed.</p>
+
+    <input
+      type="text"
+      id="search"
+      placeholder="Search subject or topic..."
+      onkeyup="searchQuestions()"
+    />
+
+    <button onclick="unlockPaid()">🔓 Enter Access Code</button>
+    <button onclick="adminMode()">Admin Mode</button>
+
+     <h1>👨‍🏫 Teacher Contribution</h1>
+    <p>Teachers can submit questions for students.</p>
+
+    <form id="teacherForm">
+      <input
+        type="text"
+        id="teacherName"
+        placeholder="Teacher name"
+        required
+      /><br /><br />
+
+      <select id="subject" required>
+        <option value="">Select subject</option>
+        <option>Mathematics</option>
+        <option>Biology</option>
+        <option>Physics</option>
+        <option>Chemistry</option></select
+      ><br /><br />
+
+      <textarea
+        id="questionText"
+        placeholder="Enter question here"
+        required
+      ></textarea
+      ><br /><br />
+
+      <button type="submit">Submit Question</button>
+    </form>
+
+    <p><em>Note: Questions appear after admin approval.</em></p>
+
+    <div id="pending"></div>
+    
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
