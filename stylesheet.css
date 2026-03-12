@@ -1,0 +1,220 @@
+/* =====================================================
+   GLOBAL RESET
+   Removes default browser spacing and ensures
+   consistent box sizing across the entire project
+===================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   BODY / GLOBAL PAGE STYLE
+===================================================== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  padding: 20px;
+  color: #333;
+}
+
+/* =====================================================
+   NAVIGATION BAR
+===================================================== */
+.navbar {
+  position: sticky;     /* Navbar stays visible when scrolling */
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  background: #2c3e50;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Navigation links */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+/* Make list items appear horizontally */
+nav li {
+  display: inline;
+}
+
+/* =====================================================
+   TEXT STYLES
+===================================================== */
+
+/* Main page heading */
+h1 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* Paragraph spacing */
+p {
+  margin-bottom: 15px;
+}
+
+/* =====================================================
+   SEARCH INPUT
+===================================================== */
+#search {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+button {
+  background: #3498db;
+  color: white;
+
+  border: none;
+  padding: 8px 14px;
+  margin-top: 8px;
+
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Button hover effect */
+button:hover {
+  background: #2980b9;
+}
+
+/* Special "copy all" button */
+.copy-all {
+  background: #27ae60;
+  margin-right: 10px;
+}
+
+.copy-all:hover {
+  background: #1e8449;
+}
+
+/* =====================================================
+   QUESTION CARD / BOX
+   Each question appears inside a card
+===================================================== */
+.question-box {
+  background: rgb(206, 199, 199);
+  padding: 15px;
+  margin-bottom: 15px;
+
+  border-radius: 10px;
+
+  /* Soft shadow for card effect */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Question title */
+.question-box h5 {
+  color: #8e44ad;
+  margin-bottom: 8px;
+}
+
+/* Question text */
+.question-box p {
+  font-size: 16px;
+}
+
+/* =====================================================
+   ADMIN MODE
+   Shows editable mode with dashed border
+===================================================== */
+.admin {
+  border: 2px dashed red;
+}
+
+/* =====================================================
+   LOCKED CONTENT
+   Used when content requires unlocking or payment
+===================================================== */
+.locked {
+  filter: blur(6px);
+  pointer-events: none;   /* Prevents interaction */
+}
+
+/* Unlock notification box */
+.unlock-box {
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* =====================================================
+   INFO / NOTICE BOX
+===================================================== */
+.info {
+  background: #9ddce7;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #bee5eb;
+  margin-bottom: 20px;
+}
+
+/* =====================================================
+   FORMS
+===================================================== */
+form {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+/* Inputs styling */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Textarea height */
+textarea {
+  height: 100px;
+}
+
+/* =====================================================
+   SEPARATION LINE
+===================================================== */
+hr {
+  margin: 30px 0;
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE DESIGN
+===================================================== */
+@media (max-width: 600px) {
+
+  /* Stack navigation links vertically */
+  nav a {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  /* Make buttons full width */
+  button {
+    width: 100%;
+  }
+
+}
