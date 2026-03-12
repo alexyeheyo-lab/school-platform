@@ -1,237 +1,441 @@
-/* ================================
-   RESET (Removes default browser styles)
-   ================================ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* =====================================
+   GLOBAL RESET
+   Removes default browser spacing
+===================================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
 }
 
+/* =====================================
+   HEADER & NAVIGATION
+===================================== */
 
-/* ================================
-   BODY
-   Main page styling
-   ================================ */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f4f6f8;   /* light gray background */
-  padding: 20px;         /* space around the page */
-  color: #333;           /* dark gray text */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px;
+  background:#1b7bdb;
+  color:white;
 }
 
+/* Navigation list */
 
-/* ================================
-   NAVIGATION BAR
-   ================================ */
-nav {
-  background: #2c3e50;   /* dark blue/gray */
-  padding: 12px;
-  border-radius: 8px;
-  margin-bottom: 20px;
+.nav-list{
+  display:flex;
+  list-style:none;
 }
 
-/* Navigation links */
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
+.nav-list li{
+  margin-left:20px;
 }
 
-/* Display menu items in a row */
-nav li {
-  display: inline;
+.nav-list li a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-/* Sticky navbar (stays at top while scrolling) */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.nav-list li a:hover{
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
+/* =====================================
+   HERO SECTION (Landing section)
+===================================== */
 
-/* ================================
-   HEADINGS & TEXT
-   ================================ */
-h1 {
-  margin-bottom: 10px;
-  color: #2c3e50;
+.hero{
+  height:90vh;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+  color:white;
+
+  /* background image with dark overlay */
+  background:
+  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  url("images/phot 6.JPG");
+
+  background-size:cover;
+  background-position:center;
 }
 
-p {
-  margin-bottom: 15px;
-  font-size: 20px;
+/* =====================================
+   BUTTON STYLING
+===================================== */
+
+button{
+  transition:all 0.2s ease;
 }
 
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 25px;
 
-/* ================================
-   SEARCH INPUT
-   ================================ */
-#search {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  background:#ff6600;
+  color:rgba(255,255,255,0.9);
+
+  text-decoration:none;
+  border-radius:5px;
 }
 
+/* =====================================
+   SECTION DEFAULT STYLE
+===================================== */
 
-/* ================================
-   BUTTONS
-   ================================ */
-button {
-  background: #3498db;   /* blue */
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  margin-top: 8px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  
+section{
+  padding:60px 20px;
+  text-align:center;
 }
 
-/* Button hover effect */
-button:hover {
-  background: #2980b9;
+/* =====================================
+   NEWS SECTION
+===================================== */
+
+.news-container{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-top:30px;
 }
 
-/* Special button for copying all content */
-.copy-all {
-  background: #27ae60;
-  margin-right: 10px;
+.news-card{
+  background:#a5a1a1fb;
+  padding:20px;
+  width:250px;
+  border-radius:5px;
 }
 
-.copy-all:hover {
-  background: #1e8449;
-}
-
-
-/* ================================
-   QUESTION BOX
-   Container for each question
-   ================================ */
-
-button {
-  transition: all 0.2s ease;
-}
-
-.question-box {
-  transition: transform 0.2s ease;
-  background-color: #d3dadf;
-  border-radius: 10px;
-  margin-top: 10px;
-  
-}
-
-.question-box:hover {
-  transform: translateY(-3px);
-}
-
-/* ================================
-   ADMIN MODE
-   Shows editable area for admins
-   ================================ */
-.admin {
-  border: 2px dashed red;
-}
-
-
-/* ================================
-   LOCKED CONTENT
-   Used for premium/paid content
-   ================================ */
-.locked {
-  filter: blur(6px);       /* blur locked content */
-  pointer-events: none;    /* disable clicking */
-}
-
-
-/* Unlock message box */
-.unlock-box {
-  background: #fff3cd;
-  border: 1px solid #ffeeba;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-
-/* ================================
-   INFO BOX
-   ================================ */
-.info {
-  background: #9ddce7;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #bee5eb;
-  margin-bottom: 20px;
-}
-
-
-/* ================================
-   FORM STYLING
-   ================================ */
-form {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  max-width: 500px;
-}
-
-/* Inputs, dropdowns and textarea */
-input{
-  border:1px solid #ddd;
-  border-radius:8px;
-  padding:12px;
-}
-
-/* Larger textarea */
-textarea{
-  border:1px solid #ddd;
-  border-radius:8px;
-  padding:12px;
-}
-
-input:focus,
-textarea:focus{
-  outline:none;
-  border-color:#3498db;
-}
-
-
-/* ================================
-   HORIZONTAL LINE
-   ================================ */
-hr {
-  margin: 30px 0;
-}
-
-
-/* ================================
-   MOBILE RESPONSIVE DESIGN
-   ================================ */
-
-  
 @media (max-width: 600px) {
+  .news-container{
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
-  body {
-    padding: 10px;
+
+/* =====================================
+   GALLERY
+===================================== */
+
+.gallery-container{
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(200px,1fr));
+
+  gap:15px;
+  margin-top:30px;
+}
+
+.gallery img{
+  width:100%;
+  border-radius:5px;
+}
+
+/* =====================================
+   STATS SECTION
+===================================== */
+
+.stats{
+  background:#0e69c4;
+  color:white;
+  padding:60px 20px;
+}
+
+.stats-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:40px;
+  margin-top:30px;
+}
+
+.stat{
+  flex:1 1 200px;
+}
+
+.stat h3{
+  font-size:40px;
+}
+
+/* =====================================
+   SLIDESHOW / IMAGE SLIDER
+===================================== */
+
+.slideshow{
+  text-align:center;
+  padding:60px 20px;
+}
+
+.slider{
+  position:relative;
+  max-width:800px;
+  margin:auto;
+}
+
+/* individual slides */
+
+.slide{
+  width:100%;
+  display:none;
+  border-radius:6px;
+}
+
+/* active slide */
+
+.slide.active{
+  display:block;
+}
+
+/* navigation arrows */
+
+.prev,
+.next{
+
+  position:absolute;
+  top:50%;
+
+  transform:translateY(-50%);
+
+  background:rgba(0,0,0,0.5);
+  color:white;
+
+  border:none;
+
+  font-size:25px;
+  padding:10px 15px;
+
+  cursor:pointer;
+}
+
+.prev{
+  left:10px;
+}
+
+.next{
+  right:10px;
+}
+
+/* =====================================
+   SLIDER DOTS
+===================================== */
+
+.dots{
+  text-align:center;
+  margin-top:15px;
+}
+
+.dot{
+  height:12px;
+  width:12px;
+
+  margin:5px;
+
+  background:#bbb;
+
+  border-radius:50%;
+  display:inline-block;
+
+  cursor:pointer;
+}
+
+.dot.active{
+  background:#333;
+}
+
+/* =====================================
+   WHATSAPP BUTTON
+===================================== */
+
+.whatsapp{
+  position:fixed;
+
+  bottom:20px;
+  right:20px;
+
+  background:#25D366;
+  color:white;
+
+  padding:12px 20px;
+
+  border-radius:50px;
+
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer{
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+
+/* =====================================
+   MOBILE NAVIGATION
+===================================== */
+
+/* menu icon */
+
+.menu-toggle{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
+}
+
+/* Tablet / Mobile */
+
+@media screen and (max-width:768px){
+
+  .menu-toggle{
+    display:block;
   }
 
-  nav {
-    text-align: center;
+  .nav-list{
+
+    display:none;
+
+    flex-direction:column;
+
+    width:100%;
+
+    background:#004080;
+
+    position:absolute;
+
+    top:70px;
+    left:0;
+
   }
 
-  .question-box {
-    padding: 12px;
+  .nav-list li{
+    margin:20px 0;
+    text-align:center;
+  }
+
+  .nav-list.active{
+    display:flex;
   }
 
 }
 
- 
+/* =====================================
+   SCROLL ANIMATIONS
+===================================== */
+
+[data-animate]{
+
+  opacity:0;
+
+  transform:translateY(30px);
+
+  transition:all 0.8s ease-out;
+
+}
+
+[data-animate].in-view{
+
+  opacity:1;
+
+  transform:translateY(0);
+
+}
+
+/* =====================================
+   CONTAINER
+===================================== */
+
+.container{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+/* =====================================
+   RESPONSIVE TYPOGRAPHY
+===================================== */
+
+h1{
+  font-size:50px;
+}
+
+p{
+  font-size:18px;
+}
+
+@media screen and (max-width:768px){
+
+  h1{
+    font-size:32px;
+  }
+
+  p{
+    font-size:16px;
+  }
+
+}
+
+/* =====================================
+   SMALL MOBILE IMPROVEMENTS
+===================================== */
+
+@media screen and (max-width:480px){
+
+  section{
+    padding:40px 10px;
+  }
+
+  .prev,
+  .next{
+
+    font-size:16px;
+    padding:6px 10px;
+
+  }
+  .news-container{
+    width: 100%;
+    margin-bottom: 20px;
+
+  }
+
+}
+
+/* =====================================
+   SCHOOL LOGO / BADGE
+===================================== */
+
+.school-badge{
+  width:150px;
+  height:auto;
+  display:block;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
