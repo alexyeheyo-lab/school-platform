@@ -117,12 +117,7 @@ section{
   border-radius:5px;
 }
 
-@media (max-width: 600px) {
-  .news-container{
-    flex-direction: column;
-    align-items: center;
-  }
-}
+
 
 
 /* =====================================
